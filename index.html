@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>
+     {{ message }}
+    </p>
+    <h1>
+     {{ beer }}
+    </h1>
+    <button v-on:click="changeMessage()">
+      click right here
+    </button>
+
+<!--     <input type="text" v-model="message">
+
+    <div id='example-3'>
+      <input type="checkbox" id="jack" value="IPA" v-model="checkedNames">
+      <label for="ipa">IPA</label>
+      <input type="checkbox" id="john" value="Lager" v-model="checkedNames">
+      <label for="lager">Lager</label>
+      <input type="checkbox" id="mike" value="Stout" v-model="checkedNames">
+      <label for="stout">Stout</label>
+      <br>
+      <span>Checked beers: {{ checkedNames }}</span>
+    </div> -->
+
+    <div>1st integer<input type="integer" v-model="number1"></div>
+    <div>2nd integer<input type="integer" v-model="number2"></div>
+    <div>3rd integer<input type="integer" v-model="number3"></div>  
+    <button v-on:click="getSum()">
+      Get Sum
+    </button>
+
+    <p>
+      <button v-on:click="toggleInfo()">Show/Hide Info</button>
+      <div v-if="showInfo">Here is the information you feel you must need</div>
+    </p>
+
+    <br>
+
+    {{characters}}
+
+    <div v-for="character in characters">
+      <p>Meet {{character}}</p>
+    </div>
+
+    Introduce a new character<input type="text" v-model="newCharacter">
+    <button v-on:click="addCharacter()">Introduce a new character</button>
+
+
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
